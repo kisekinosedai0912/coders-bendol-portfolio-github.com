@@ -1,0 +1,238 @@
+/* Universals */
+:root{
+    --background-color:rgb(10, 128, 128);
+    --bg-color:rgba(0, 0, 0, 0.4);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* About me nav menu styles */
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: rgba(0, 0, 0,0.7);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0,0.5);
+    opacity: 90%;
+    text-align: right;
+    padding-left: 30px;
+    padding-right: 30px;
+    animation: nav-bar 1s;
+}
+.navigation ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: var(--background-color);
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: 0.5s;
+}
+.navigation ul li:hover::after{
+    width: 80%;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-family:'Segoe UI', sans-serif;
+    font-size: 18px;
+}
+li a:hover{
+    color: var(--background-color);
+}
+h1{
+    color:white;
+    font-weight:bold;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* About me body section styles */
+body{
+    background-color: rgba(0, 0, 0, 0.9);
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+    animation: transitionIn 3s;
+}
+/* Skill styles */
+.skill-heading{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-top: 30px;
+}
+.front{
+    margin-right: 100px;
+    margin-left: 150px;
+}
+.back{
+    margin-left: 350px;
+}
+.skill-main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--bg-color);
+    width: 48.5%;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+}
+.skill-main, .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info p{
+    color: white;
+}
+.info{
+    padding: 10px;
+}
+.skill-bar{
+    width: 100%;
+}
+.skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+    padding-left: 10px;
+    
+}
+.skill-bar .bar span{
+    display: flex;
+    width: 50%;
+    height: 10px;
+    position: absolute;
+    background-color: var(--background-color);
+    border-radius: 25px;
+}
+/* animation styles */
+/* Front End */
+@keyframes html{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+.skill-bar .bar .html{
+    width: 85%;
+    animation: html 3s;
+}
+@keyframes css{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+.skill-bar .bar .css{
+    width: 50%;
+    animation: css 3s;
+}
+@keyframes js{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 5%;
+    }
+}
+.skill-bar .bar .js{
+    width: 5%;
+    animation: js 3s;
+}
+@keyframes bs{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 45%;
+    }
+}
+.skill-bar .bar .bs{
+    width: 45%;
+    animation: bs 3s;
+}
+/* Back End */
+@keyframes php{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 15%;
+    }
+}
+.skill-bar .bar .php{
+    width: 15%;
+    animation: php 3s;
+}
+@keyframes laravel{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 1%;
+    }
+}
+.skill-bar .bar .laravel{
+    width: 1%;
+    animation: laravel 3s;
+}
+@keyframes sql{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+.skill-bar .bar .sql{
+    width: 60%;
+    animation: sql 3s;
+}
+@keyframes mdb{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 10%;
+    }
+}
+.skill-bar .bar .mdb{
+    width: 10%;
+    animation: mdb 3s;
+}
+
+/* Resume body styles */
+.r-body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 350px;
+    
+}
